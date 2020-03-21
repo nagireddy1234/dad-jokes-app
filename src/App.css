@@ -1,16 +1,16 @@
+body{
+  background: linear-gradient(135deg, rgba(180,58,101,1) 41%, rgba(252,176,69,1) 41%, rgba(30,253,29,1) 41%);
+  font-family: "Rubik",sans-serif;
+}
 
 .App{
   height: 100vh;
   background: linear-gradient(135deg, rgba(180,58,101,1) 41%, rgba(252,176,69,1) 41%, rgba(30,253,29,1) 41%);
-  font-family: "Rubik",sans-serif;
-}
-.jokelist{
   display: flex;
-  width: 80%;
-  height: 80%;
   align-items: center;
   justify-content: center;
 }
+
 .jokelist-sidebar{
   display: flex;
   align-items: center;
@@ -55,5 +55,8 @@
 display: flex;
 justify-content: center;
 align-items: center;
-color: #fff;
+flex-direction: column;
+color: red;
+text-align: center;
+height: 100vh;
 }

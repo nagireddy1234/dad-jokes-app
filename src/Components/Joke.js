@@ -48,7 +48,7 @@ const getEmoji = () => {
     return <i className="em em-confused"  aria-label="CONFUSED FACE"></i>;
   }
   else {
-    return <i class="em em-angry"  aria-label="ANGRY FACEName"></i>;
+    return <i className="em em-angry"  aria-label="ANGRY FACEName"></i>;
   }
 }
 
