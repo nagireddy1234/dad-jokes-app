@@ -33,22 +33,22 @@ const getEmoji = () => {
       return <i className="em em-rolling_on_the_floor_laughing"  aria-label="ROLLING ON THE FLOOR LAUGHING"></i>;
   }
   else if(props.joke.votes>=12){
-     return <i class="em em-laughing" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>;
+     return <i className="em em-laughing" aria-label="SMILING FACE WITH OPEN MOUTH AND TIGHTLY-CLOSED EYES"></i>;
   }
   else if(props.joke.votes>=9){
-    return <i class="em em-smiley" aria-label="SMILING FACE WITH OPEN MOUTH"></i>;
+    return <i className="em em-smiley" aria-label="SMILING FACE WITH OPEN MOUTH"></i>;
   }
   else if(props.joke.votes>=6){
-    return <i class="em em-slightly_smiling_face"  aria-label="SLIGHTLY SMILING FACE"></i>;
+    return <i className="em em-slightly_smiling_face"  aria-label="SLIGHTLY SMILING FACE"></i>;
   }
   else if(props.joke.votes>=3){
-    return  <i class="em em-neutral_face"  aria-label="NEUTRAL FACE"></i>;
+    return  <i className="em em-neutral_face"  aria-label="NEUTRAL FACE"></i>;
   }
   else if(props.joke.votes>=0){
-    return <i class="em em-confused"  aria-label="CONFUSED FACE"></i>;
+    return <i className="em em-confused"  aria-label="CONFUSED FACE"></i>;
   }
   else {
-    return <i class="em em-angry"  aria-label="ANGRY FACE"></i>;
+    return <i class="em em-angry"  aria-label="ANGRY FACEName"></i>;
   }
 }
 

@@ -1,10 +1,15 @@
+
 .App{
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(180,58,101,1) 41%, rgba(252,176,69,1) 41%, rgba(30,253,29,1) 41%);
+  font-family: "Rubik",sans-serif;
+}
+.jokelist{
   display: flex;
+  width: 80%;
+  height: 80%;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: rgb(180,58,101);
-  background: linear-gradient(135deg, rgba(180,58,101,1) 41%, rgba(252,176,69,1) 41%, rgba(30,253,29,1) 41%);
 }
 .jokelist-sidebar{
   display: flex;
@@ -42,6 +47,13 @@
   width: 50%;
   padding-top: 2em;
   -webkit-box-shadow: 7px 10px 15px -1px rgba(204,204,204,1);
--moz-box-shadow: 7px 10px 15px -1px rgba(204,204,204,1);
-box-shadow: 7px 10px 15px -1px #0000;
+  -moz-box-shadow: 7px 10px 15px -1px rgba(204,204,204,1);
+  box-shadow: 7px 10px 15px -1px #0000;
+}
+
+.spinner{
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
 }
