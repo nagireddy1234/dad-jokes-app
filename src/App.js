@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
-import Joke from "./Components/Joke"
+import uuid from 'uuid/v4';
+import Joke from "./Components/Joke";
+import JokeList from './Components/JokeList';
 
 export default class App extends Component {
 
@@ -16,7 +17,7 @@ export default class App extends Component {
   async componentDidMount() {
     let jokes = []
     while (jokes.length < this.props.numJokesToGet) {
-      let res = await axios.get("https://icanhazdadjoke.com?limit=20", {
+      let res = await axios.get("https://icanhazdadjoke.com", {
         headers: {
           Accept: "application/json"
         }
@@ -34,9 +35,10 @@ export default class App extends Component {
     return (
       <div>
           <h1>Dad Jokes</h1>
-          {this.state.jokes.map((joke)=>{
-            return <Joke key={uuidv4()} joke={joke} />
+          {this.state.jokes.map((j)=>{
+            return <Joke key={uuid()} j={j} />
           })}
+          <JokeList />
       </div>
     )
   }
