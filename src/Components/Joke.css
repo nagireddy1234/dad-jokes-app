@@ -15,6 +15,13 @@ font-weight: 400;
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.fa-arrow-up:hover{
+  animation: moverUP 0.5s ease-in-out infinite;
+}
+.fa-arrow-down:hover{
+  animation: moverDown 0.5s ease-in-out infinite;
+}
 .joke-votes{
   border-radius: 50%;
   border: 3px solid red;
@@ -32,4 +39,25 @@ font-weight: 400;
 .joke-smiley{
   margin-left: auto;
   font-size: 1.6rem;
+}
+.joke-smiley:hover, .jokelist-sidebar img:hover{
+  animation: shake 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% { transform:  rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  60% { transform: rotate(0deg); }
+  80% { transform: rotate(10deg); }
+  100% { transform:  rotate(0deg); }
+}
+
+@keyframes moverUP {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-2px); }
+ 
+}
+@keyframes moverDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(2px); }
 }

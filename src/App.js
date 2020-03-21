@@ -20,6 +20,9 @@ export default class App extends Component {
     
   componentDidMount() {
     if(this.state.jokes.length===0){
+      this.setState({
+        isLoading:true
+      })
        this.getJokes();
     }
   }
@@ -82,9 +85,9 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="jokelist-sidebar">
-          <h1 className="jokelist-title"> <span className="">Dad</span> Jokes</h1>
+          <h1 className="jokelist-title"> Dad <span className="jokelist-title-font"> Jokes</span> </h1>
          <img src={laughing} alt="laughingImage" /> 
-         <button type="button" onClick={this.getMoreJokes}>Fetch Jokes</button>
+         <button className="jokelist-getmore" type="button" onClick={this.getMoreJokes}>Fetch Jokes</button>
         </div>
           <div className="jokelist-jokes">
           {jokes.map((joke)=>{
