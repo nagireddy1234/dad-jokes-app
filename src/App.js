@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-import uuid from 'uuid/v4';
+import uuid from "react-uuid";
 import Joke from "./Components/Joke";
-import JokeList from './Components/JokeList';
+import laughing from "./Images/laughing.png"
+//  import JokeList from './Components/JokeList';
 
 export default class App extends Component {
 
@@ -23,7 +24,7 @@ export default class App extends Component {
         }
       })
       // console.log(res.data.joke)
-      jokes.push(res.data.joke)
+      jokes.push({text:res.data.joke, votes:0, id:uuid()})
     }
     // console.log(jokes);
     this.setState({
@@ -33,12 +34,18 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-          <h1>Dad Jokes</h1>
-          {this.state.jokes.map((j)=>{
-            return <Joke key={uuid()} j={j} />
+      <div className="App">
+        <div className="jokelist-sidebar">
+          <h1 className="jokelist-tile"> <span>Dad</span> Jokes</h1>
+         <img src={laughing} alt="laughingImage" /> 
+         <button type="button">Fetch Jokes</button>
+        </div>
+          <div className="jokelist-jokes">
+          {this.state.jokes.map((joke)=>{
+            return <Joke key={uuid()} joke={joke} />
           })}
-          <JokeList />
+          {/* <JokeList /> */}
+          </div>
       </div>
     )
   }

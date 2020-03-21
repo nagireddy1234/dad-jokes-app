@@ -4,7 +4,7 @@ const Joke = (props) => {
   // console.log(props.joke)
   return (
     <div className="container">
-      <ul> <li>{props.j}</li></ul>
+      <ul> <li>{props.joke.text}-{props.joke.votes}</li></ul>
     </div>
   );
 };
