@@ -15,7 +15,7 @@
   background-color: #9575cd;
   z-index: 2;
 }
-.jokelist-tile{
+.jokelist-title{
   font-size: 4rem;
   margin:2rem;
   color:#fff;
@@ -37,7 +37,7 @@
   flex-direction: column;
   align-self: center;
   height: 75vh;
-  background-color:#ccc;
+  background-color:#fff;
   overflow: auto;
   width: 50%;
   padding-top: 2em;
